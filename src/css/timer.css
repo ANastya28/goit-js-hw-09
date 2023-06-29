@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+
+a {
+  color: white;
+}
+
+input {
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  display: flex;
+  margin: 50px auto;
+  justify-content: center;
+  color: black;
+  cursor: pointer;
+  background-color: yellow;
+  min-width: 150px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+button[disabled] {
+    background-color: gray;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.field {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+}
+
+.value {
+    font-size: 50px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 0 15px;
+    background-color: blue;
+}
