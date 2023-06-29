@@ -32,6 +32,8 @@ button {
 
 button[disabled] {
     background-color: gray;
+    border-color: black;
+    border: 2px solid;
 }
 
 .timer {

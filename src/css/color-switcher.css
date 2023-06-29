@@ -1,0 +1,32 @@
+button {
+max-width: 150px;
+border-radius: 4px;
+cursor: pointer;
+background-color: black;
+color: white;
+font-size: 20px;
+font-weight: 700;
+margin: 10px auto;
+padding: 30px;
+}
+
+button[disabled] {
+    background-color: gray;
+    border-color: black;
+    border: 2px solid;
+}
+
+a {
+   color: black; 
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}

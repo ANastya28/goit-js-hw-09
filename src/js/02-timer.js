@@ -20,12 +20,17 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (selectedDates[0] < Date.now()) {
-        Notiflix.Notify.warning("Please choose a date in the future");
+        Notiflix.Notify.failure("Please choose a date in the future");
         btnStart.setAttribute('disabled', true);
+        dateInput.style.borderColor = "red";
+        dateInput.style.color = "red";
     } else {
-        chosenDate = selectedDates[0];
-        btnStart.removeAttribute('disabled');
-        btnStart.addEventListener('click', onBtnStart);
+      chosenDate = selectedDates[0];
+      
+      btnStart.removeAttribute('disabled');
+      btnStart.addEventListener('click', onBtnStart);
+      dateInput.style.borderColor = "black";
+      dateInput.style.color = "black";
     }
   },
 };
@@ -67,13 +72,13 @@ function convertMs(ms) {
   const day = hour * 24;
 
   // Remaining days
-  const days = Math.floor(ms / day);
+  const days = addLeadingZero(Math.floor(ms / day));
   // Remaining hours
-  const hours = Math.floor((ms % day) / hour);
+  const hours = addLeadingZero(Math.floor((ms % day) / hour));
   // Remaining minutes
-  const minutes = Math.floor(((ms % day) % hour) / minute);
+  const minutes = addLeadingZero(Math.floor(((ms % day) % hour) / minute));
   // Remaining seconds
-  const seconds = Math.floor((((ms % day) % hour) % minute) / second);
+  const seconds = addLeadingZero(Math.floor((((ms % day) % hour) % minute) / second));
 
   return { days, hours, minutes, seconds };
 }
