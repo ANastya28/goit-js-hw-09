@@ -23,7 +23,7 @@ function makeBodyColorChange() {
 
 function onBtnStartClick() {
   makeBodyColorChange();
-  Notiflix.Notify.success(`you started switch backgroundcolor`);
+  Notiflix.Notify.success(`you started switch the backgroundcolor`);
   
   btnStop.removeAttribute('disabled');
   btnStart.setAttribute('disabled', true);
@@ -31,7 +31,7 @@ function onBtnStartClick() {
 
 function onBtnStopClick() {
   clearInterval(timerId);
-  Notiflix.Notify.failure(`you stopted switch backgroundcolor`);
+  Notiflix.Notify.failure(`you stopted switch the backgroundcolor`);
 
   btnStop.setAttribute('disabled', true);
   btnStart.removeAttribute('disabled');
