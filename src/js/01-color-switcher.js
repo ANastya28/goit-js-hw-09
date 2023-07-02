@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 
 const btnStart = document.querySelector('[data-start]');
 const btnStop = document.querySelector('[data-stop]');
@@ -21,15 +22,17 @@ function makeBodyColorChange() {
 };
 
 function onBtnStartClick() {
-    makeBodyColorChange();
-
-    btnStop.removeAttribute('disabled');
-    btnStart.setAttribute('disabled', true);
+  makeBodyColorChange();
+  Notiflix.Notify.success(`you started switch backgroundcolor`);
+  
+  btnStop.removeAttribute('disabled');
+  btnStart.setAttribute('disabled', true);
 };
 
 function onBtnStopClick() {
-    clearInterval(timerId);
+  clearInterval(timerId);
+  Notiflix.Notify.failure(`you stopted switch backgroundcolor`);
 
-    btnStop.setAttribute('disabled', true);
-    btnStart.removeAttribute('disabled');
+  btnStop.setAttribute('disabled', true);
+  btnStart.removeAttribute('disabled');
 };
